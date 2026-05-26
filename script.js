@@ -10,7 +10,7 @@ const bgMusic = new Audio('music.mp3'); bgMusic.loop = true;
 let frames = 0, score = 0, gameStarted = false, gameOver = false, reqAnim;
 
 const alperen = {
-    x: 50, y: 150, w: 40, h: 40, velocity: 0, gravity: 0.25, jump: -5,
+    x: 50, y: 150, w: 40, h: 40, velocity: 0, gravity: 0.15, jump: -4,
     draw: () => ctx.drawImage(alperenImg, alperen.x, alperen.y, alperen.w, alperen.h),
     update: () => {
         alperen.velocity += alperen.gravity; alperen.y += alperen.velocity;
@@ -19,7 +19,7 @@ const alperen = {
 };
 
 const pipes = {
-    arr: [], w: 50, gap: 120, dx: 2,
+    arr: [], w: 50, gap: 170, dx: 1.5,
     draw: () => {
         ctx.fillStyle = '#2ecc71';
         pipes.arr.forEach(p => {
@@ -28,7 +28,7 @@ const pipes = {
         });
     },
     update: () => {
-        if (frames % 100 === 0) {
+        if (frames % 120 === 0) { 
             let topH = Math.random() * (canvas.height / 2);
             pipes.arr.push({ x: canvas.width, top: topH, bottom: canvas.height - topH - pipes.gap });
         }
