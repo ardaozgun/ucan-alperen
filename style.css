@@ -1,0 +1,5 @@
+body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #222; font-family: sans-serif; }
+#game-container { position: relative; }
+canvas { background-color: #70c5ce; display: block; border-radius: 10px; }
+#score { position: absolute; top: 10px; left: 10px; font-size: 24px; color: white; font-weight: bold; text-shadow: 2px 2px 0 #000; }
+#start-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 15px 30px; font-size: 20px; cursor: pointer; background: #e74c3c; color: white; border: none; border-radius: 5px; }
